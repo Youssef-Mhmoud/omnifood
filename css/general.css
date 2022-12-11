@@ -37,7 +37,7 @@
 -----------------------------------------------
   06 BORDER-RADIUS
   - Default: 8px
-
+  - Medium: 12px
 -----------------------------------------------
   07 WHITESPACE
 
@@ -173,4 +173,8 @@ body {
 
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+strong {
+  font-weight: 500;
 }
