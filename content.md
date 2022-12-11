@@ -35,22 +35,14 @@ Pause anytime: Going on vacation? Just pause your subscription, and we refund un
 
 
 
-### Omnifood works with any diet
+### 
 
-Vegetarian
-Vegan
-Pescatarian
-Gluten-free
-Lactose-free
-Keto
-Paleo
-Low FODMAP
-Kid-friendly
+
 
 ### Sample meals
 
 **Omnifood AI chooses from 5,000+ recipes**
-
+<!-- 
 Meal 1: Japanese Gyozas
 
 - Category: Vegetarian
@@ -65,7 +57,7 @@ Meal 2: Avocado Salad
 - Calories: 400
 - NutriScore (Registered): 92
 - Average rating: 4.8
-- Number reviews: 441
+- Number reviews: 441 -->
 
 ### We offer a free sample meal
 
