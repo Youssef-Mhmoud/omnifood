@@ -132,11 +132,10 @@
     height: 100vh;
     transform: translateX(100%);
 
-
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all .5s ease-in;
+    transition: all 0.5s ease-in;
 
     /* HIDDEN */
 
@@ -165,7 +164,6 @@
     display: block;
   }
 
-
   .main-nav-list {
     flex-direction: column;
     gap: 4.8rem;
@@ -177,6 +175,43 @@
   }
 }
 
+/***********************/
+/* BELOW 704px (Smaller Tablets) */
+/***********************/
+
+@media (max-width: 44em) {
+  .grid--3--cols,
+  .grid--4--cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diet {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+
+  .pricing-plan {
+    width: 100%;
+  }
+
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .logo-col, .address-col {
+    grid-column: span 3;
+  }
+
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+}
 
 /* * FONT SIZE SYSTEM (px)
   - 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
