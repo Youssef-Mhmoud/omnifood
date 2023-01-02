@@ -1,14 +1,16 @@
-/* rem and em do NOT depend on html font-size in media queries Instead, 1rem = 1em = 16px */
+/* rem and em do NOT depend on html font-size in media queries!
+Instead, 1rem = 1em = 16px */
 
-/***********************/
+/*********************************/
 /* BELOW 1344px (Smaller desktops) */
-/***********************/
+/*********************************/
+
 @media (max-width: 84em) {
   .hero {
     max-width: 120rem;
   }
 
-  .heading-primray {
+  .heading-primary {
     font-size: 4.4rem;
   }
 
@@ -17,13 +19,13 @@
   }
 }
 
-/***********************/
+/*********************************/
 /* BELOW 1200px (Landscape Tablets) */
-/***********************/
+/*********************************/
 
 @media (max-width: 75em) {
   html {
-    /*  9px / 16px = 56.25% */
+    /* 9px / 16px  */
     font-size: 56.25%;
   }
 
@@ -57,12 +59,13 @@
   }
 }
 
-/***********************/
+/*********************************/
 /* BELOW 944px (Tablets) */
-/***********************/
+/*********************************/
 
 @media (max-width: 59em) {
   html {
+    /* 8px / 16px = 0.5 = 50% */
     font-size: 50%;
   }
 
@@ -107,6 +110,7 @@
   }
 
   .cta {
+    /* 3/5 = 60% + 2/5 = 40% */
     grid-template-columns: 3fr 2fr;
   }
 
@@ -118,16 +122,16 @@
     margin-top: 1.2rem;
   }
 
-  /* MOBILE NAVIGATION */
+  /* MOBILE NAVIGATION  */
   .btn-mobile-nav {
     display: block;
-    z-index: 999;
+    z-index: 9999;
   }
 
   .main-nav {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     position: absolute;
     top: 0;
     left: 0;
@@ -140,7 +144,9 @@
     justify-content: center;
     transition: all 0.5s ease-in;
 
-    /* HIDDEN */
+    /* Hide navigation */
+    /* Allows NO transitions at all */
+    /* display: none; */
 
     /* 1) Hide it visually */
     opacity: 0;
@@ -148,7 +154,7 @@
     /* 2) Make it unaccessible to mouse and keyboard */
     pointer-events: none;
 
-    /* 3) Hide it from screen readers*/
+    /* 3) Hide it from screen readers */
     visibility: hidden;
   }
 
@@ -159,12 +165,12 @@
     transform: translateX(0);
   }
 
-  .nav-open .icon-mobile-nav[name="menu-outline"] {
-    display: none;
-  }
-
   .nav-open .icon-mobile-nav[name="close-outline"] {
     display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
   }
 
   .main-nav-list {
@@ -178,18 +184,18 @@
   }
 }
 
-/***********************/
-/* BELOW 704px (Smaller Tablets) */
-/***********************/
+/*********************************/
+/* BELOW 704 (Smaller tablets) */
+/*********************************/
 
 @media (max-width: 44em) {
-  .grid--3--cols,
-  .grid--4--cols {
+  .grid--3-cols,
+  .grid--4-cols {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .diet {
-    grid-column: 1/-1;
+  .diets {
+    grid-column: 1 / -1;
     justify-self: center;
   }
 
@@ -217,29 +223,25 @@
   }
 }
 
-/***********************/
-/* BELOW 554px (Phones) */
-/***********************/
+/*********************************/
+/* BELOW 544 (Phones) */
+/*********************************/
 
 @media (max-width: 34em) {
-  .grid {
-    row-gap: 4.8rem;
-  }
-
-  .grid--2--cols,
-  .grid--3--cols,
-  .grid--4--cols {
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
     grid-template-columns: 1fr;
-  }
-
-  .section-hero {
-    padding: 2.4rem 0 6.4rem 0;
   }
 
   .btn,
   .btn:link,
   .btn:visited {
     padding: 2.4rem 1.6rem;
+  }
+
+  .section-hero {
+    padding: 2.4rem 0 6.4rem 0;
   }
 
   .hero {
@@ -289,17 +291,18 @@
   }
 }
 
-/* * FONT SIZE SYSTEM (px)
-  - 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
+/* 
+- FONT SIZE (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
 
-/* * SPACING SYSTEM (px):
-  - 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
- */
 
-/***********************/
-/* Fixing Safari flexbox gap  */
-/***********************/
+/*********************************/
+/* Fixing Safari flexbox gap */
+/*********************************/
 
 .no-flexbox-gap .main-nav-list li:not(:last-child) {
   margin-right: 4.8rem;
